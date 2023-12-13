@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["number1"])) {
+    if (($_POST["number1"])==null) {
         $enumber1 = "Hãy nhập số thứ nhất";
     } elseif (!is_numeric($_POST["number1"])) {
         $enumber1 = "Số thứ nhất không hợp lệ";
@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $number1 = $_POST['number1'];
     }
 
-    if (empty($_POST["number2"])) {
+    if (($_POST["number2"])==null) {
         $enumber2 = "Hãy nhập số thứ hai";
     } elseif (!is_numeric($_POST["number2"])) {
         $enumber2 = "Số thứ hai không hợp lệ";
